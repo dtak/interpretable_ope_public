@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from rl_basics.parametric_models import EnvParametricModel
-from rl_basics import generate_trajectory
+from rl_basics_local import generate_trajectory
 
 
 def trans_weight(trans, policy_eval, policy_behavior):
