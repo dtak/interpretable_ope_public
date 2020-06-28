@@ -1,4 +1,4 @@
-import rl_basics
+import rl_basics_local
 
 import numpy as np
 
@@ -6,7 +6,7 @@ def fqe(transitions_data, policy, gamma, q_function, initial_states,
         print_progress=False, num_of_iterations = 100,
         return_q_function=False):
     '''
-    :param transitions_data: rl_basics.classes.TransitionDataSet
+    :param transitions_data: rl_basics_local.classes.TransitionDataSet
     :param policy: function taking a state (as a numpy.ndarray) and return an
         action as a scalar
     :param gamma: discount factor for the MDP
@@ -17,7 +17,7 @@ def fqe(transitions_data, policy, gamma, q_function, initial_states,
     # TODO : change to convergence check
 
     # Check that policy() returns the correct data type
-    assert isinstance(transitions_data, rl_basics.classes.TransitionsDataSet), (
+    assert isinstance(transitions_data, rl_basics_local.classes.TransitionsDataSet), (
         "Error in fqe(): transitions_data must be a TransitionsDataSet")
     test_trans = transitions_data.transitions[0]
     test_action = policy(test_trans.state, time_step=0)
